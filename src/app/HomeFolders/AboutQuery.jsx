@@ -70,7 +70,7 @@ const itemVariants = (delay = 0) => ({
 
 export default function AboutQuery() {
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-gradient-to-b from-gray-50 to-white  px-4 sm:px-6 lg:px-8">
       <Title
         title={"About AskZone"}
         description={"Where curiosity meets knowledge"}
@@ -130,9 +130,9 @@ export default function AboutQuery() {
           transition={{ delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <button className="px-8 py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2">
+          {/* <button className="px-8 py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2">
             Join Our Community
-          </button>
+          </button> */}
         </motion.div>
       </div>
     </section>

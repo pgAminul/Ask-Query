@@ -1,6 +1,7 @@
 import React from "react";
-import Navbar from "./Components/Navbar/navbar";
 import Home from "./HomeFolders/Home";
+import Navbar from "./Components/Navbar/navbar";
+import Footer from "./HomeFolders/Footer";
 
 export default function page() {
   return (
@@ -9,6 +10,7 @@ export default function page() {
         <Navbar />
       </div>
       <Home />
+      <Footer />
     </div>
   );
 }
