@@ -6,6 +6,7 @@ import TopUsers from "./TopUser";
 import RecentQuestions from "./RecentQuestion";
 import WhyJoinUs from "./WhyJoinUs";
 import Testimonials from "./Testimonials";
+import Posts from "../Components/UserPosts/Posts";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <RecentQuestions />
       <WhyJoinUs />
       <Testimonials />
+      <Posts />
     </div>
   );
 }
