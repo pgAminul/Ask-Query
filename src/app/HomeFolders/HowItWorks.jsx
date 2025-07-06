@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { FiLogIn, FiMessageSquare, FiCheckCircle } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Title from "../Components/ReusableComponent/Title";
@@ -51,9 +51,54 @@ const itemVariants = {
 };
 
 export default function HowItWorks() {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = 400;
+
+    const dots = Array.from({ length: 80 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 2 + 1,
+      dx: Math.random() * 0.5 - 0.25,
+      dy: Math.random() * 0.5 - 0.25,
+    }));
+
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      dots.forEach((dot) => {
+        ctx.beginPath();
+        ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(255, 0, 0, 0.3)";
+        ctx.fill();
+
+        dot.x += dot.dx;
+        dot.y += dot.dy;
+
+        if (dot.x < 0 || dot.x > canvas.width) dot.dx *= -1;
+        if (dot.y < 0 || dot.y > canvas.height) dot.dy *= -1;
+      });
+
+      requestAnimationFrame(draw);
+    };
+
+    draw();
+  }, []);
+
   return (
-    <section className="">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative overflow-hidden">
+      <canvas
+        ref={canvasRef}
+        className="absolute top-0 left-0 w-full h-[400px] pointer-events-none z-0"
+      />
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <Title
             title="How It Works"
@@ -74,10 +119,10 @@ export default function HowItWorks() {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -5 }}
-              className={`card bg-base-200 ${step.border} p-8 rounded-box border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center`}
+              className={`  ${step.border} p-8 rounded-box border hover:shadow-md transition-all bg-black/70 hover:bg-black backdrop-blur-sm shadow-xl duration-300 flex flex-col items-center text-center`}
             >
               <div
-                className={`${step.color} mb-6 p-4 rounded-full bg-base-100  shadow-sm relative`}
+                className={`${step.color} mb-6 p-4 rounded-full bg-base-100 shadow-sm relative`}
               >
                 {step.icon}
                 <div className="absolute -top-2 -right-2 text-base-100 bg-error rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">

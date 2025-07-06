@@ -11,7 +11,7 @@ const recentQuestions = [
     time: "2 hours ago",
     user: {
       name: "Sarah Dev",
-      avatar: "/avatars/sarah-dev.jpg",
+      avatar: "https://i.ibb.co/wW93yy6/myimg.jpg",
     },
   },
   {
@@ -22,7 +22,7 @@ const recentQuestions = [
     time: "5 hours ago",
     user: {
       name: "Mike Codes",
-      avatar: "/avatars/mike-codes.jpg",
+      avatar: "https://i.ibb.co/wW93yy6/myimg.jpg",
     },
   },
   {
@@ -33,7 +33,7 @@ const recentQuestions = [
     time: "1 day ago",
     user: {
       name: "Priya Styles",
-      avatar: "/avatars/priya-styles.jpg",
+      avatar: "https://i.ibb.co/wW93yy6/myimg.jpg",
     },
   },
   {
@@ -44,7 +44,7 @@ const recentQuestions = [
     time: "1 day ago",
     user: {
       name: "Alex Designer",
-      avatar: "/avatars/alex-designer.jpg",
+      avatar: "https://i.ibb.co/wW93yy6/myimg.jpg",
     },
   },
   {
@@ -55,7 +55,7 @@ const recentQuestions = [
     time: "2 days ago",
     user: {
       name: "Jordan State",
-      avatar: "/avatars/jordan-state.jpg",
+      avatar: "https://i.ibb.co/wW93yy6/myimg.jpg",
     },
   },
   {
@@ -66,7 +66,7 @@ const recentQuestions = [
     time: "3 days ago",
     user: {
       name: "Taylor Ops",
-      avatar: "/avatars/taylor-ops.jpg",
+      avatar: "https://i.ibb.co/wW93yy6/myimg.jpg",
     },
   },
 ];

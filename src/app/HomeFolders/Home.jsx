@@ -6,19 +6,21 @@ import TopUsers from "./TopUser";
 import RecentQuestions from "./RecentQuestion";
 import WhyJoinUs from "./WhyJoinUs";
 import Testimonials from "./Testimonials";
-import Posts from "../Components/UserPosts/Posts";
+import PopularTopics from "./PopularTopics";
+import Community from "./Community";
 
 export default function Home() {
   return (
     <div>
       <Header />
       <AboutQuery />
+      <PopularTopics />
+      <Community />
       <HowItWorks />
       <TopUsers />
       <RecentQuestions />
       <WhyJoinUs />
       <Testimonials />
-      <Posts />
     </div>
   );
 }

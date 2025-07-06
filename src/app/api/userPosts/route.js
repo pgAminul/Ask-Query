@@ -1,4 +1,3 @@
-// src/app/api/userPosts/route.js
 import connectDB from "../lib/dataBase";
 import { NextResponse } from "next/server";
 import Post from "./PostSchema";

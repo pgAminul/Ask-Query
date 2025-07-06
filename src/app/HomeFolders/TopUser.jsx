@@ -1,109 +1,3 @@
-// "use client";
-
-// import React from "react";
-// import Title from "../Components/ReusableComponent/Title";
-
-// const topUsers = [
-//   {
-//     id: 1,
-//     name: "Alex Johnson",
-//     role: "Expert Contributor",
-//     points: 5240,
-//     avatar: "/avatars/alex-johnson.jpg",
-//     rank: 1,
-//   },
-//   {
-//     id: 2,
-//     name: "Sarah Williams",
-//     role: "Community Leader",
-//     points: 4875,
-//     avatar: "/avatars/sarah-williams.jpg",
-//     rank: 2,
-//   },
-//   {
-//     id: 3,
-//     name: "Michael Chen",
-//     role: "Top Answerer",
-//     points: 4520,
-//     avatar: "/avatars/michael-chen.jpg",
-//     rank: 3,
-//   },
-//   {
-//     id: 4,
-//     name: "Emily Parker",
-//     role: "Knowledge Partner",
-//     points: 3980,
-//     avatar: "/avatars/emily-parker.jpg",
-//     rank: 4,
-//   },
-//   {
-//     id: 5,
-//     name: "David Kim",
-//     role: "Solution Expert",
-//     points: 3650,
-//     avatar: "/avatars/david-kim.jpg",
-//     rank: 5,
-//   },
-//   {
-//     id: 6,
-//     name: "Priya Patel",
-//     role: "Community Helper",
-//     points: 3420,
-//     avatar: "/avatars/priya-patel.jpg",
-//     rank: 6,
-//   },
-// ];
-
-// export default function TopUsers() {
-//   return (
-//     <section className=" px-4 sm:px-6 lg:px-8 ">
-//       <div className="max-w-7xl mx-auto">
-//         <div className="text-center">
-//           <Title
-//             title="Top Contributors"
-//             description="Our most valuable community members"
-//           />
-//         </div>
-
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-//           {topUsers.map((user) => (
-//             <div
-//               key={user.id}
-//               className="card bg-base-200 border border-base-300 shadow-md hover:shadow-xl transition duration-300"
-//             >
-//               <div className="card-body items-center text-center">
-//                 <div className="relative mb-4">
-//                   <div className="avatar">
-//                     <div className="w-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-//                       <img src={user.avatar} alt={user.name} loading="lazy" />
-//                     </div>
-//                   </div>
-//                   <div className="absolute -top-2 -right-2 bg-primary text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center shadow">
-//                     #{user.rank}
-//                   </div>
-//                 </div>
-//                 <h3 className="text-xl font-semibold text-base-content">
-//                   {user.name}
-//                 </h3>
-//                 <p className="text-sm text-base-content/60 mb-2">{user.role}</p>
-//                 <div className="badge badge-outline badge-accent text-sm">
-//                   {user.points.toLocaleString()} pts
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-
-//         <div className="py-5 text-center">
-//           <button className="btn btn-primary px-8">
-//             View All Contributors
-//           </button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 
 import React from "react";
@@ -117,7 +11,7 @@ const topUsers = [
     name: "Alex Johnson",
     role: "Expert Contributor",
     points: 5240,
-    avatar: "/avatars/alex-johnson.jpg",
+    avatar: "https://i.ibb.co/wW93yy6/myimg.jpg",
     badge: <FaCrown className="text-yellow-400 text-2xl" />,
     rank: 1,
   },
@@ -126,7 +20,7 @@ const topUsers = [
     name: "Sarah Williams",
     role: "Community Leader",
     points: 4875,
-    avatar: "/avatars/sarah-williams.jpg",
+    avatar: "https://i.ibb.co/wW93yy6/myimg.jpg",
     badge: <FaTrophy className="text-gray-300 text-2xl" />,
     rank: 2,
   },
@@ -135,7 +29,7 @@ const topUsers = [
     name: "Michael Chen",
     role: "Top Answerer",
     points: 4520,
-    avatar: "/avatars/michael-chen.jpg",
+    avatar: "https://i.ibb.co/wW93yy6/myimg.jpg",
     badge: <FaTrophy className="text-amber-600 text-2xl" />,
     rank: 3,
   },
@@ -144,7 +38,7 @@ const topUsers = [
     name: "Emily Parker",
     role: "Knowledge Partner",
     points: 3980,
-    avatar: "/avatars/emily-parker.jpg",
+    avatar: "https://i.ibb.co/wW93yy6/myimg.jpg",
     badge: <FaAward className="text-blue-400 text-2xl" />,
     rank: 4,
   },
@@ -153,7 +47,7 @@ const topUsers = [
     name: "David Kim",
     role: "Solution Expert",
     points: 3650,
-    avatar: "/avatars/david-kim.jpg",
+    avatar: "https://i.ibb.co/wW93yy6/myimg.jpg",
     badge: <FaAward className="text-green-400 text-2xl" />,
     rank: 5,
   },
@@ -162,7 +56,7 @@ const topUsers = [
     name: "Priya Patel",
     role: "Community Helper",
     points: 3420,
-    avatar: "/avatars/priya-patel.jpg",
+    avatar: "https://i.ibb.co/wW93yy6/myimg.jpg",
     badge: <FaAward className="text-purple-400 text-2xl" />,
     rank: 6,
   },
