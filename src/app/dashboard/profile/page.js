@@ -1,10 +1,10 @@
 import React from "react";
-import DashboardHome from "./DashboardHome";
+import Profile from "./Profile";
 
 export default function page() {
   return (
     <div>
-      <DashboardHome />
+      <Profile />
     </div>
   );
 }

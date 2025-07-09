@@ -11,14 +11,17 @@ import {
 } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
+import { MdDashboard } from "react-icons/md";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function SidebarNavbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
   const links = [
     { href: "/", label: "Home", icon: <FiHome /> },
+    { href: "/dashboard", label: "Dashboard", icon: <MdDashboard /> },
     {
       href: "/dashboard/my-questions",
       label: "My Questions",

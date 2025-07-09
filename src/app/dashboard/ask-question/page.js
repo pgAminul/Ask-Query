@@ -1,10 +1,10 @@
 import React from "react";
-import DashboardHome from "./DashboardHome";
+import Posts from "./UserPosts/Posts";
 
 export default function page() {
   return (
     <div>
-      <DashboardHome />
+      <Posts />
     </div>
   );
 }

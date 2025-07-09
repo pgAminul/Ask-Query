@@ -9,10 +9,10 @@ export default function DashboardLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="flex h-screen">
+        <div className="flex  h-screen ">
           <NavbarDashboard />
 
-          <div className="flex-1 overflow-auto p-4 mt-14 md:mt-0 ">
+          <div className="flex-1 overflow-auto p-4 mt-14 md:mt-0 md:ml-20 ">
             {children}
           </div>
         </div>
