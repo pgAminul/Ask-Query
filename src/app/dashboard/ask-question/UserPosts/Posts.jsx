@@ -1,10 +1,11 @@
 "use client";
 import Title from "@/app/Components/ReusableComponent/Title";
-import axios from "axios";
+import PublicUrl from "@/app/Components/URL/PublicUrl";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 const Posts = () => {
+  const axiosPublic = PublicUrl();
   const name = "Aminul islam";
   const [formData, setFormData] = useState({
     name,
@@ -23,8 +24,8 @@ const Posts = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios
-      .post(`http://localhost:3000/api/userPosts`, formData)
+    axiosPublic
+      .post(`/api/userPosts`, formData)
       .then((res) => {
         if (res.data.error) {
           toast.error(res.data.error);

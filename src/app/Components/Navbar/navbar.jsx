@@ -37,12 +37,16 @@ export default function Navbar() {
 
           {/* Right side auth section */}
           <div className="flex items-center gap-4">
-            <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium">
-              Sign out
-            </button>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
-              Login
-            </button>
+            <a href="/register">
+              <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium">
+                Sign in
+              </button>
+            </a>
+            <a href="/login">
+              <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium">
+                Login
+              </button>
+            </a>
           </div>
         </div>
       </div>

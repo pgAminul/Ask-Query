@@ -8,10 +8,12 @@ import WhyJoinUs from "./WhyJoinUs";
 import Testimonials from "./Testimonials";
 import PopularTopics from "./PopularTopics";
 import Community from "./Community";
+import Example from "./Example";
 
 export default function Home() {
   return (
     <div>
+      <Example />
       <Header />
       <AboutQuery />
       <PopularTopics />

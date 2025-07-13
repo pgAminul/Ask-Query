@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const connectDB = async () => {
   try {
     const url =
-      "mongodb+srv://dbDatabase:nddA8Et5D5iZVvqX@server.lxdqe.mongodb.net/?retryWrites=true&w=majority&appName=Server";
+      "mongodb+srv://dbDatabase:zeI1pjue2b4W287V@server.lxdqe.mongodb.net/?retryWrites=true&w=majority&appName=Server";
 
     mongoose
       .connect(url)
