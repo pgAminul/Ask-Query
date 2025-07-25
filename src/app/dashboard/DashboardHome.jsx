@@ -1,3 +1,7 @@
+"use client";
+import Image from "next/image";
+import useAuth from "../Components/AuthProvider/useAuth";
+
 const DashboardHome = () => {
   // Static data
   const stats = {
@@ -37,6 +41,7 @@ const DashboardHome = () => {
       duration: 19,
     },
   ];
+  const { user } = useAuth();
 
   return (
     <div className="min-h-screen bg-gray-50 p-4 md:p-8">
@@ -48,7 +53,13 @@ const DashboardHome = () => {
         <div className="flex items-center space-x-4 mt-4 md:mt-0">
           <span className="text-gray-600">Welcome back!</span>
           <div className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center text-white">
-            U
+            <Image
+              src={user?.photoURL || "/default-avatar.png"}
+              alt="Profile"
+              width={120}
+              height={120}
+              className="rounded-full border-white shadow"
+            />{" "}
           </div>
         </div>
       </div>

@@ -1,7 +1,9 @@
-// components/Navbar.js
+"use client";
 import Link from "next/link";
+import useAuth from "../AuthProvider/useAuth";
 
 export default function Navbar() {
+  const { user, logOut } = useAuth();
   return (
     <nav className="bg-white shadow-sm fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,18 +38,29 @@ export default function Navbar() {
           </div>
 
           {/* Right side auth section */}
-          <div className="flex items-center gap-4">
-            <a href="/register">
-              <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium">
-                Sign in
+          {user ? (
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => logOut()}
+                className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium"
+              >
+                Logout
               </button>
-            </a>
-            <a href="/login">
-              <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium">
-                Login
-              </button>
-            </a>
-          </div>
+            </div>
+          ) : (
+            <div className="flex items-center gap-4">
+              <a href="/register">
+                <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium">
+                  Sign in
+                </button>
+              </a>
+              <a href="/login">
+                <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium">
+                  Login
+                </button>
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </nav>

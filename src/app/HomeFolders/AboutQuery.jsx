@@ -16,7 +16,7 @@ const features = [
     title: "Ask Anything",
     description: "Post your questions and get instant help from the community.",
     color: "text-indigo-600",
-    bg: "bg-indigo-50/50 backdrop-blur-sm shadow-xl hover:bg-indigo-50",
+    bg: "bg-yellow-50/50 hover:bg-yellow-50",
     delay: 0.1,
   },
   {
@@ -25,7 +25,7 @@ const features = [
     description:
       "Search thousands of verified answers with AI-powered filters.",
     color: "text-blue-600",
-    bg: "bg-blue-50/50 hover:bg-blue-50 backdrop-blur-sm shadow-xl",
+    bg: "bg-green-50/50 hover:bg-green-50",
     delay: 0.2,
   },
   {

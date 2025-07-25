@@ -1,23 +1,35 @@
 import mongoose from "mongoose";
-import bcrypt from "bcryptjs";
 
-const UsersSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
+const UsersSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    photoURL: { type: String },
+    email: {
+      type: String,
+      unique: true,
+      required: true,
+    },
+    role: {
+      type: String,
+      enum: ["user", "admin"],
+      default: "user",
+    },
+    isFraud: {
+      type: Boolean,
+      default: false,
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
   },
-  email: {
-    type: String,
-    unique: true,
-    required: true,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
-});
+  { versionKey: false }
+);
 
-// Avoid model overwrite in dev environment
+// Prevent model overwrite in dev environment
 const UserCollection =
   mongoose.models.User || mongoose.model("User", UsersSchema);
 

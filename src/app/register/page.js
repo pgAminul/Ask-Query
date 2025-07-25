@@ -23,10 +23,10 @@ const Register = () => {
   const isFraud = false;
   const handleSignUp = (e) => {
     e.preventDefault();
-    const { name, email, password, photo } = e.target.elements;
+    const { name, email, password, photoURL } = e.target.elements;
     const nameValue = name.value.trim();
     const emailValue = email.value.trim();
-    const photoValue = photo.value.trim();
+    const photoValue = photoURL.value.trim();
     const passwordValue = password.value;
 
     let hasError = false;
@@ -83,6 +83,7 @@ const Register = () => {
           email: emailValue,
           role,
           isFraud: isFraud,
+          photoURL: photoValue,
         };
 
         updateNewProfile({
@@ -98,6 +99,7 @@ const Register = () => {
 
             axiosPublic
               .post("/api/users", usersData)
+              .then((res) => console.log(res.data))
               .catch((e) => console.log(e.message));
 
             Swal.fire({
@@ -128,14 +130,17 @@ const Register = () => {
         // navigate.push("/");
         const name = result.user?.displayName;
         const email = result.user?.email;
+        const photoURL = result?.user?.photoURL;
         const usersData = {
           name,
           email,
           role,
           isFraud: isFraud,
+          photoURL,
         };
         axiosPublic
           .post("/api/users", usersData)
+          .then((res) => console.log(res.data))
           .catch((e) => console.log(e.message));
       })
       .catch((error) => {
@@ -194,8 +199,8 @@ const Register = () => {
             </label>
             <input
               type="url"
-              id="photo"
-              name="photo"
+              id="photoURL"
+              name="photoURL"
               className="w-full p-3 border rounded-lg bg-white/20 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Enter your photo URL"
             />
