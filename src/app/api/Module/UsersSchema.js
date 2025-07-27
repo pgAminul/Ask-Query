@@ -29,7 +29,6 @@ const UsersSchema = new mongoose.Schema(
   { versionKey: false }
 );
 
-// Prevent model overwrite in dev environment
 const UserCollection =
   mongoose.models.User || mongoose.model("User", UsersSchema);
 

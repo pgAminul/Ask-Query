@@ -1,4 +1,3 @@
-// src/app/userPosts/PostSchema.js
 import mongoose from "mongoose";
 
 const postSchema = new mongoose.Schema({
@@ -18,7 +17,6 @@ const postSchema = new mongoose.Schema({
   },
 });
 
-// Avoid model overwrite error in Next.js
 const Post = mongoose.models.Post || mongoose.model("Post", postSchema);
 
 export default Post;

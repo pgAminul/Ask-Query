@@ -13,6 +13,7 @@ import {
 import { MdOutlineAddCircle } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
 import useAuth from "@/app/Components/AuthProvider/useAuth";
+import PublicUrl from "@/app/Components/URL/PublicUrl";
 
 export default function ProfessionalProfilePage() {
   const canvasRef = useRef(null);
@@ -21,6 +22,8 @@ export default function ProfessionalProfilePage() {
   const [showModal, setShowModal] = useState(false);
   const [about, setAbout] = useState("");
   const [skills, setSkills] = useState("");
+
+  const axiosPublic = PublicUrl();
 
   // Animate canvas
   useEffect(() => {
@@ -78,10 +81,14 @@ export default function ProfessionalProfilePage() {
 
   const handleSave = () => {
     const profileData = {
+      email: user?.email,
       about,
       skills: skills.split(",").map((s) => s.trim()),
     };
 
+    axiosPublic
+      .post(`/api/userDetails`, profileData)
+      .then((res) => console.log(res.data));
     console.log("Saving profile data:", profileData);
     // TODO: Firebase/Backend API call here
     setShowModal(false);
